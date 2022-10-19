@@ -8,7 +8,9 @@ public class TransformSample : MonoBehaviour
     void Start()
     {
         //设置的是全局坐标
-        transform.position = new Vector3 (1.5f,1,0);
+       // transform.position = new Vector3 (1.5f,1,0);
+        //设置的是局部坐标
+        transform.localPosition = new Vector3(1.5f, 1, 0);
     }
 
 }
