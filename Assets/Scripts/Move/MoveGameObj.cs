@@ -22,5 +22,6 @@ public class MoveGameObj : MonoBehaviour
         tfs[2].Translate(speed * Time.deltaTime, 0, 0, Space.World);
         //沿其他游戏对象的轴线移动
         tfs[3].Translate(Vector3.right * speed * Time.deltaTime, tfRelative);
+
     }
 }
