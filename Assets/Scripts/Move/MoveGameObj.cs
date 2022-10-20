@@ -6,6 +6,8 @@ public class MoveGameObj : MonoBehaviour
 {
     public Transform[] tfs;
     public float speed;
+    public Transform tfRelative;
+
 
     // Update is called once per frame
     void Update()
@@ -18,7 +20,7 @@ public class MoveGameObj : MonoBehaviour
         //沿世界坐标轴移动
         //tfs[2].Translate(Vector3.right * speed * Time.deltaTime, Space.World);
         tfs[2].Translate(speed * Time.deltaTime, 0, 0, Space.World);
-
-
+        //沿其他游戏对象的轴线移动
+        tfs[3].Translate(Vector3.right * speed * Time.deltaTime, tfRelative);
     }
 }
